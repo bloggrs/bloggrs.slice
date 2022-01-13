@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container py-28 bg-slate-100">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Preview</h1>
+      <div class="w-3/12 hidden sm:block sm:ml-6">
+        <div class="flex space-x-4">
+          <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300 hover:bg-slate-700 hover:text-white" -->
+
+          <a href="#" class="
+              text-slate-600
+              hover:text-slate-900
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            ">Home</a>
+
+          <a href="#" class="
+              text-slate-600
+              hover:text-slate-900
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            ">About Me</a>
+
+          <a href="#" class="
+              text-slate-600
+              hover:text-slate-900
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            ">Contact</a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container py-28 bg-slate-100">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Functional</h1>
+
+      <div id="pages_list"></div>
+      <!-- <div
+        class="
+          my-50
+          mb-14
+          bg-white
+          shadow-md
+          max-h-1/2
+          w-3/4
+          rounded-md
+          justify-center
+        "
+      >
+        <div class="mx-6">
+          <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">
+            Categories
+          </h1>
+          <ul class="py-4 mx-5 list-disc space-y-3">
+            <li>Food (5)</li>
+            <li>Fashion (252)</li>
+            <li>T-Shirts (159)</li>
+            <li>New Trends (9)</li>
+            <li>Woman's Fashion (45)</li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+  </body>
+  <script>
+    const pages_list_el = document.getElementById("pages_list");
+    class BloggrsAPI {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.base_url = "http://localhost:4000/api/v1";
+      }
+      async getPages() {
+        const res = await fetch(
+          `${this.base_url}/blogs/${this.blog_id}/pages`
+        );
+        const {
+          data: { pages },
+        } = await res.json();
+        return pages;
+      }
+    }
+    class BloggrsClient {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.bloggrsApi = new BloggrsAPI({ blog_id, secret });
+      }
+      handleCreatePagesListWidget = async (el) => {
+        const pages = await this.bloggrsApi.getPages();
+        const div = `
+          <div class="w-3/12 hidden sm:block sm:ml-6">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300 hover:bg-slate-700 hover:text-white" -->
+
+              ${pages.map(page => (
+                `<a href="${page.slug}" class="
+                  text-slate-600
+                  hover:text-slate-900
+                  px-3
+                  py-2
+                  rounded-md
+                  text-base
+                  font-medium
+                ">${page.name}</a>`
+              )).join(" ")}
+            </div>
+          </div>
+        `
+        el.innerHTML = div;
+        return div;
+      };
+      createWidget(el, { type }) {
+        const widgets = {
+          pages_list: this.handleCreatePagesListWidget,
+        };
+        return widgets[type](el);
+      }
+    }
+    const bloggrs = new BloggrsClient({
+      blog_id: 1,
+      secret: "59cd2369-7b88-4116-b237-b44af9951e80",
+    });
+    bloggrs.createWidget(pages_list_el, { type: "pages_list" });
+  </script>
+</html>

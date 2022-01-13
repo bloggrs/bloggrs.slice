@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="flex flex-inline">
+    <div class="container w-1/2  py-28 bg-slate-100">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Preview</h1>
+      <div class="h-full grid grid-rows-3 grid-flow-col col-span-2 gap-4">
+        <div class="border-b-2 border-b-slate-300 col-span-3 h-full flex">
+          <div class="bg-white shadow-md h-3/4 w-1/2 rounded-md"></div>
+          <div class="px-3 h-3/4 w-3/4">
+            <h1 class="text-slate-700 font-medium text-xl">
+              Lorem Ipsum Title
+            </h1>
+            <p class="py-2 text-slate-400 font-normal text-sm">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+               when an unknown printer 
+            </p>
+            <div class="flex">
+              <p class="ml-24text-slate-700 font-normal text-sm">
+                Wednesday, December 22, 2021 &nbsp;&nbsp;&nbsp; |
+              </p>
+              <p class="mx-4 text-slate-700 font-normal text-sm">
+                John Cena
+              </p>
+            </div>
+            <div class="flex  my-2 w-full">
+              <p class="w-1/2 text-blue-300 font-medium text-sm flex ">
+                <img src="/dist/static/icons8-heart-80.png">
+                <span class="mx-2 text-center my-2">153 likes</span>
+              </p>
+              <p class="w-1/2 right-0 text-blue-400 font-normal text-sm flex items-center justify-center">
+                <img src="/dist/static/icons8-comments-80.png">
+                <span class="mx-2">3 comments</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="border-b-2 my-4 border-b-slate-300 col-span-3 h-full flex">
+          <div class="bg-white shadow-md h-3/4 w-1/2 rounded-md"></div>
+          <div class="px-3 h-3/4 w-3/4">
+            <h1 class="text-slate-700 font-medium text-xl">
+              Lorem Ipsum Title
+            </h1>
+            <p class="py-2 text-slate-400 font-normal text-sm">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+               when an unknown printer 
+            </p>
+            <div class="flex">
+              <p class="ml-24text-slate-700 font-normal text-sm">
+                Wednesday, December 22, 2021 &nbsp;&nbsp;&nbsp; |
+              </p>
+              <p class="mx-4 text-slate-700 font-normal text-sm">
+                John Cena
+              </p>
+            </div>
+            <div class="flex  my-2 w-full">
+              <p class="w-1/2 text-blue-400 font-medium text-sm flex ">
+                <img src="/dist/static/icons8-love-80.png">
+                <span class="mx-2 text-center my-2">153 likes</span>
+              </p>
+              <p class="w-1/2 right-0 text-blue-400 font-normal text-sm flex items-center justify-center">
+                <img src="/dist/static/icons8-comments-80.png">
+                <span class="mx-2">3 comments</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class=" col-span-3 my-8 h-full flex">
+          <div class="bg-white shadow-md h-3/4 w-1/2 rounded-md"></div>
+          <div class="px-3 h-3/4 w-3/4">
+            <h1 class="text-slate-700 font-medium text-xl">
+              Lorem Ipsum Title
+            </h1>
+            <p class="py-2 text-slate-400 font-normal text-sm">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+               when an unknown printer 
+            </p>
+            <div class="flex">
+              <p class=" text-slate-700 font-normal text-sm">
+                Wednesday, December 22, 2021 &nbsp;&nbsp;&nbsp; |
+              </p>
+              <p class="mx-4 text-slate-700 font-normal text-sm">
+                John Cena
+              </p>
+            </div>
+            <div class="flex  my-2 w-full">
+              <p class="w-1/2 text-blue-300 font-medium text-sm flex ">
+                <img src="/dist/static/icons8-heart-80.png">
+                <span class="mx-2 text-center my-2">153 likes</span>
+              </p>
+              <p class="w-1/2 right-0 text-blue-400 font-normal text-sm flex items-center justify-center">
+                <img src="/dist/static/icons8-comments-80.png">
+                <span class="mx-2">3 comments</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container w-1/2  py-28 bg-slate-200">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Functional</h1>
+
+      <div id="posts_list"></div>
+      <!-- <div
+        class="
+          my-50
+          mb-14
+          bg-white
+          shadow-md
+          max-h-1/2
+          w-3/4
+          rounded-md
+          justify-center
+        "
+      >
+        <div class="mx-6">
+          <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">
+            Categories
+          </h1>
+          <ul class="py-4 mx-5 list-disc space-y-3">
+            <li>Food (5)</li>
+            <li>Fashion (252)</li>
+            <li>T-Shirts (159)</li>
+            <li>New Trends (9)</li>
+            <li>Woman's Fashion (45)</li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+  </body>
+  <script>
+    const posts_el = document.getElementById("posts_list");
+    class BloggrsAPI {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.base_url = "http://localhost:4000/api/v1";
+      }
+      async getPosts() {
+        const res = await fetch(
+          `${this.base_url}/blogs/${this.blog_id}/posts`
+        );
+        const {
+          data: { posts },
+        } = await res.json();
+        return posts;
+      }
+    }
+    class BloggrsClient {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.bloggrsApi = new BloggrsAPI({ blog_id, secret });
+      }
+      handleCreatePostsListWidget = async (el) => {
+        const posts = await this.bloggrsApi.getPosts();
+        const div = `
+        <div class="h-full grid grid-rows-3 grid-flow-col col-span-2 gap-4">
+            ${posts.map(post => {
+              return `
+              <div class="border-b-2 border-b-slate-300 col-span-3 h-full flex">
+                <div class="bg-white shadow-md h-3/4 w-1/2 rounded-md"></div>
+                <div class="px-3 h-3/4 w-3/4">
+                  <h1 class="text-slate-700 font-medium text-xl">
+                    ${post.title}
+                  </h1>
+                  <p class="py-2 text-slate-400 font-normal text-sm">
+                    ${post.html_content}
+                  </p>
+                  <div class="flex">
+                    <p class="ml-24text-slate-700 font-normal text-sm">
+                      Wednesday, December 22, 2021 &nbsp;&nbsp;&nbsp; |
+                    </p>
+                    <p class="mx-4 text-slate-700 font-normal text-sm">
+                      John Cena
+                    </p>
+                  </div>
+                  <div class="flex  my-2 w-full">
+                    <p class="w-1/2 text-blue-300 font-medium text-sm flex ">
+                      <img src="/dist/static/icons8-heart-80.png">
+                      <span class="mx-2 text-center my-2">${post.meta.likes_count} likes</span>
+                    </p>
+                    <p class="w-1/2 right-0 text-blue-400 font-normal text-sm flex items-center justify-center">
+                      <img src="/dist/static/icons8-comments-80.png">
+                      <span class="mx-2">${post.meta.comments_count} comments</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              `
+            }).join(" ")}
+          </div>
+        `
+        el.innerHTML = div;
+        return div;
+      };
+      createWidget(el, { type }) {
+        const widgets = {
+          posts_list: this.handleCreatePostsListWidget,
+        };
+        return widgets[type](el);
+      }
+    }
+    const bloggrs = new BloggrsClient({
+      blog_id: 1,
+      secret: "59cd2369-7b88-4116-b237-b44af9951e80",
+    });
+    bloggrs.createWidget(posts_el, { type: "posts_list" });
+  </script>
+</html>

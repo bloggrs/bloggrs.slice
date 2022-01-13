@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container py-28 bg-slate-100">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Preview</h1>
+      <div
+        class="
+          my-50
+          mb-14
+          bg-white
+          shadow-md
+          max-h-1/2
+          w-3/4
+          rounded-md
+          justify-center
+        "
+      >
+        <div class="mx-6">
+          <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">
+            Categories
+          </h1>
+          <ul class="py-4 mx-5 list-disc space-y-3">
+            <li>Food (5)</li>
+            <li>Fashion (252)</li>
+            <li>T-Shirts (159)</li>
+            <li>New Trends (9)</li>
+            <li>Woman's Fashion (45)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container py-28 bg-slate-100">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Functional</h1>
+
+      <div id="categories"></div>
+      <!-- <div
+        class="
+          my-50
+          mb-14
+          bg-white
+          shadow-md
+          max-h-1/2
+          w-3/4
+          rounded-md
+          justify-center
+        "
+      >
+        <div class="mx-6">
+          <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">
+            Categories
+          </h1>
+          <ul class="py-4 mx-5 list-disc space-y-3">
+            <li>Food (5)</li>
+            <li>Fashion (252)</li>
+            <li>T-Shirts (159)</li>
+            <li>New Trends (9)</li>
+            <li>Woman's Fashion (45)</li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+  </body>
+  <script>
+    const categories_el = document.getElementById("categories");
+    class BloggrsAPI {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.base_url = "http://localhost:4000/api/v1";
+      }
+      async getCategories() {
+        const res = await fetch(
+          `${this.base_url}/blogs/${this.blog_id}/categories`
+        );
+        const {
+          data: { categories },
+        } = await res.json();
+        return categories;
+      }
+    }
+    class BloggrsClient {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.bloggrsApi = new BloggrsAPI({ blog_id, secret });
+      }
+      handleCreateCategoriesWidget = async (el) => {
+        console.log(this.bloggrsApi, this.bloggrsApi, this.secret);
+        const categories = await this.bloggrsApi.getCategories();
+        const div = document.createElement("div");
+        div.className =
+          "my-50 mb-14 bg-white shadow-md max-h-1/2 w-3/4 rounded-md justify-center";
+        const div__div2 = document.createElement("div");
+        div__div2.className = "mx-6";
+        const div2__h1 = document.createElement("h1");
+        div2__h1.className = "py-3 mb-4 text-slate-700 font-medium text-xl";
+        div2__h1.innerHTML = "Categories";
+        const div2__ul = document.createElement("ul");
+        div2__ul.className = "py-4 mx-5 list-disc space-y-3";
+        for (let category of categories) {
+          const ul__li = document.createElement("li");
+          ul__li.innerHTML = `${category.name} (${category.meta.posts_count})`;
+          div2__ul.appendChild(ul__li);
+        }
+        //
+        div__div2.appendChild(div2__h1);
+        div__div2.appendChild(div2__ul);
+        div.appendChild(div__div2);
+        el.appendChild(div);
+        return div;
+      };
+      createWidget(el, { type }) {
+        const widgets = {
+          categories: this.handleCreateCategoriesWidget,
+        };
+        return widgets[type](el);
+      }
+    }
+    const bloggrs = new BloggrsClient({
+      blog_id: 1,
+      secret: "59cd2369-7b88-4116-b237-b44af9951e80",
+    });
+    bloggrs.createWidget(categories_el, { type: "categories" });
+  </script>
+</html>

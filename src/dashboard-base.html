@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-100">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <nav class=" bg-white shadow-md max-h-96 py-5">
+      <div class="mx-32 px-2 sm:px-6 lg:px-8">
+        <div class="  relative flex items-center justify-between h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="
+                inline-flex
+                items-center
+                justify-center
+                p-2
+                rounded-md
+                text-slate-400
+                hover:text-white hover:bg-slate-700
+                focus:outline-none
+                focus:ring-2
+                focus:ring-inset
+                focus:ring-white
+              "
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!--
+              Icon when menu is closed.
+
+              Heroicon name: outline/menu
+
+              Menu open: "hidden", Menu closed: "block"
+            -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!--
+              Icon when menu is open.
+
+              Heroicon name: outline/x
+
+              Menu open: "block", Menu closed: "hidden"
+            -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flex-1 flex items-center justify-center sm:justify-start">
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="/dist/static/image1.png"
+                alt="Workflow"
+              />
+              <img
+                class="hidden lg:block h-32 w-auto"
+                src="/dist/static/image1.png"
+                alt="Workflow"
+              />
+            </div>
+            <div class="hidden sm:block sm:ml-6">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300 hover:bg-slate-700 hover:text-white" -->
+
+                <a
+                  href="#"
+                  class="
+                    text-slate-600
+                    hover:text-slate-900
+                    px-3
+                    py-2
+                    rounded-md
+                    text-base
+                    font-medium
+                  "
+                  >Features</a
+                >
+
+                <a
+                  href="#"
+                  class="
+                    text-slate-600
+                    hover:text-slate-900
+                    px-3
+                    py-2
+                    rounded-md
+                    text-base
+                    font-medium
+                  "
+                  >Pricing</a
+                >
+
+                <a
+                  href="#"
+                  class="
+                    text-slate-600
+                    hover:text-slate-900
+                    px-3
+                    py-2
+                    rounded-md
+                    text-base
+                    font-medium
+                  "
+                  >Blog</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <div class="flex">
+              <div class="py-2 flex-inline">
+                <h4 class="mx-5 font-medium text-slate-600">John Cena</h4>
+                <h4 class="mx-4 font-medium text-slate-400">@johncena</h4>
+              </div>
+              <a href="/src/my-account">
+                <!-- <button class="btn btn-slate w-40 h-12 rounded-sm">Sign In</button> -->
+                <img src="/dist/static/icons8-test-account-80.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300  hover:text-slate-900" -->
+          <a
+            href="#"
+            class="
+              bg-slate-900
+              text-white
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            aria-current="page"
+            >Dashboard</a
+          >
+
+          <a
+            href="#"
+            class="
+              text-slate-300
+              hover:text-slate-900
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >Features</a
+          >
+
+          <a
+            href="#"
+            class="
+              text-slate-300
+              hover:text-slate-900
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >Pricing</a
+          >
+
+          <a
+            href="#"
+            class="
+              text-slate-300
+              hover:text-slate-900
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >Blog</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div
+      class="fixed h-screen max-h-screen max-w-52 w-24 py-5 bg-slate-700"
+    >
+      <center class="">
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-dashboard-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-page-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-chat-bubble-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-team-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-settings-80.png"/>
+      </center>
+      <div class="fixed bottom-0 bg-white h-24 py-5 w-24 bg-slate-900">
+        <div class="cursor-pointer align-middle w-14 h-14 m-auto py-4 mx-5 rounded-full bg-slate-700 text-center ">
+          <span class="py-4 font-medium text-white">GK</span>
+        </div>
+      </div>
+    </div>
+    <div class="container max-h-full max-w-7xl py-9 px-12 sm:mx-10 lg:m-auto">
+      <div class="px-2">
+        <div class="flex -mx-2">
+          <div class="w-full w-6/6 lg:w-6/6 px-2">
+            <h1 class="text-center font-normal text-5xl text-slate-700">DataAddict's Blog is all set up!</h1>      
+            <div class="my-20 container w-3/6 lg:w-6/6 px-2">
+              <div class="flex flex-inline">
+                <div class="w-6/6">
+                  <center class="">
+                    <img src="/dist/static/hugo-chatbot-1.png" class="py-2"/>
+                    <button class=" font-bold py-2 px-4 w-64 bg-orange-400 text-white font-normal rounded-full">
+                      Manage Blog
+                    </button>
+                  </center>
+                </div>
+              </div>
+              <!-- <div class="flex flex-inline">
+                <div class="w-4/6 bg-white overflow-y-scroll h-60 scrollbar-rounded scrollbar-thin scrollbar-thumb-yellow-500 scrollbar-track-orange-100 h-32 overflow-y-scroll">
+                  <p class="mx-10 my-2 text-blue-500">Travel</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel blog</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel tickets store</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel tickets subscriptions</p>
+                  <p class="mx-10 my-2 text-slate-500">Online Travel Show</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel blog</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel tickets store</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel tickets subscriptions</p>
+                  <p class="mx-10 my-2 text-slate-500">Online Travel Show</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel blog</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel tickets store</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel tickets subscriptions</p>
+                  <p class="mx-10 my-2 text-slate-500">Online Travel Show</p>
+                  <p class="mx-10 my-2 text-slate-500">Travel accessories</p>
+                  <p class="mx-10 my-2 text-slate-500">Online Travel Accessories Shop</p>
+                </div>
+              </div> -->
+            </div>   
+                     
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

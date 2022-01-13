@@ -1,0 +1,361 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container py-28 bg-slate-100">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Preview</h1>
+      <nav class="bg-white shadow-md max-h-96 py-5">
+        <div class="mx-32 px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  p-2
+                  rounded-md
+                  text-slate-400
+                  hover:text-white hover:bg-slate-700
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-inset
+                  focus:ring-white
+                " aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!--
+                Icon when menu is closed.
+  
+                Heroicon name: outline/menu
+  
+                Menu open: "hidden", Menu closed: "block"
+              -->
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <!--
+                Icon when menu is open.
+  
+                Heroicon name: outline/x
+  
+                Menu open: "block", Menu closed: "hidden"
+              -->
+                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="flex-1 flex items-center justify-center sm:justify-start">
+              <div class="w-9/12 flex-shrink-0 flex items-center">
+                <img class="block w-40 lg:hidden h-8 w-auto h-auto" src="/dist/static/logo-placeholder-image.png" alt="Workflow">
+                <img class="hidden absolute lg:block h-32 w-auto h-auto" style="width: 12rem;" src="/dist/static/logo-placeholder-image.png" alt="Workflow">
+                <h1 class="text-xl lg:px-52 md:px-22 font-bold text-slate-700">DataAddict's Blog</h1>
+              </div>
+              <div class="w-3/12 hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300 hover:bg-slate-700 hover:text-white" -->
+  
+                  <a href="#" class="
+                      text-slate-600
+                      hover:text-slate-900
+                      px-3
+                      py-2
+                      rounded-md
+                      text-base
+                      font-medium
+                    ">Home</a>
+  
+                  <a href="#" class="
+                      text-slate-600
+                      hover:text-slate-900
+                      px-3
+                      py-2
+                      rounded-md
+                      text-base
+                      font-medium
+                    ">About Me</a>
+  
+                  <a href="#" class="
+                      text-slate-600
+                      hover:text-slate-900
+                      px-3
+                      py-2
+                      rounded-md
+                      text-base
+                      font-medium
+                    ">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300  hover:text-slate-900" -->
+            <a href="#" class="
+                bg-slate-900
+                text-white
+                block
+                px-3
+                py-2
+                rounded-md
+                text-base
+                font-medium
+              " aria-current="page">Dashboard</a>
+  
+            <a href="#" class="
+                text-slate-300
+                hover:text-slate-900
+                block
+                px-3
+                py-2
+                rounded-md
+                text-base
+                font-medium
+              ">Features</a>
+  
+            <a href="#" class="
+                text-slate-300
+                hover:text-slate-900
+                block
+                px-3
+                py-2
+                rounded-md
+                text-base
+                font-medium
+              ">Pricing</a>
+  
+            <a href="#" class="
+                text-slate-300
+                hover:text-slate-900
+                block
+                px-3
+                py-2
+                rounded-md
+                text-base
+                font-medium
+              ">Blog</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br />
+    <div class="container py-28 bg-slate-100">
+      <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">Functional</h1>
+      <div id="header"></div>
+      <!-- <div
+        class="
+          my-50
+          mb-14
+          bg-white
+          shadow-md
+          max-h-1/2
+          w-3/4
+          rounded-md
+          justify-center
+        "
+      >
+        <div class="mx-6">
+          <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">
+            Categories
+          </h1>
+          <ul class="py-4 mx-5 list-disc space-y-3">
+            <li>Food (5)</li>
+            <li>Fashion (252)</li>
+            <li>T-Shirts (159)</li>
+            <li>New Trends (9)</li>
+            <li>Woman's Fashion (45)</li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+  </body>
+  <script>
+    const header_el = document.getElementById("header");
+    class BloggrsAPI {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.base_url = "http://localhost:4000/api/v1";
+      }
+      async getPages() {
+        const res = await fetch(
+          `${this.base_url}/blogs/${this.blog_id}/pages`
+        );
+        const {
+          data: { pages },
+        } = await res.json();
+        return pages;
+      }
+      async getBlog() {
+        const res = await fetch(
+          `${this.base_url}/blogs/${this.blog_id}`
+        );
+        const {
+          data: { blog },
+        } = await res.json();
+        return blog;
+      }
+    }
+    class BloggrsClient {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.bloggrsApi = new BloggrsAPI({ blog_id, secret });
+      }
+      handleCreatePagesListWidget = async (el) => {
+        const pages = await this.bloggrsApi.getPages();
+        const div = `
+          <div class="w-3/12 hidden sm:block sm:ml-6">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300 hover:bg-slate-700 hover:text-white" -->
+
+              ${pages.map(page => (
+                `<a href="${page.slug}" class="
+                  text-slate-600
+                  hover:text-slate-900
+                  px-3
+                  py-2
+                  rounded-md
+                  text-base
+                  font-medium
+                ">${page.name}</a>`
+              )).join(" ")}
+            </div>
+          </div>
+        `
+        el.innerHTML = div;
+        return div;
+      };
+      handleCreateHeaderWidget = async (el) => {
+        const blog = await this.bloggrsApi.getBlog();
+        const div = `
+          <nav class="bg-white shadow-md max-h-96 py-5">
+                <div class="mx-32 px-2 sm:px-6 lg:px-8">
+                  <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                      <!-- Mobile menu button-->
+                      <button type="button" class="
+                          inline-flex
+                          items-center
+                          justify-center
+                          p-2
+                          rounded-md
+                          text-slate-400
+                          hover:text-white hover:bg-slate-700
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-inset
+                          focus:ring-white
+                        " aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                        Icon when menu is closed.
+
+                        Heroicon name: outline/menu
+
+                        Menu open: "hidden", Menu closed: "block"
+                      -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <!--
+                        Icon when menu is open.
+
+                        Heroicon name: outline/x
+
+                        Menu open: "block", Menu closed: "hidden"
+                      -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex-1 flex items-center justify-center sm:justify-start">
+                      <div class="w-9/12 flex-shrink-0 flex items-center">
+                        <img class="block w-40 lg:hidden h-8 w-auto h-auto" src="/dist/static/logo-placeholder-image.png" alt="Workflow">
+                        <img class="hidden absolute lg:block h-32 w-auto h-auto" style="width: 12rem;" src="/dist/static/logo-placeholder-image.png" alt="Workflow">
+                        <h1 class="text-xl lg:px-52 md:px-22 font-bold text-slate-700">${blog.name}</h1>
+                      </div>
+                      <div id="pages_list"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mobile menu, show/hide based on menu state. -->
+                <div class="sm:hidden" id="mobile-menu">
+                  <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300  hover:text-slate-900" -->
+                    <a href="#" class="
+                        bg-slate-900
+                        text-white
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                      " aria-current="page">Dashboard</a>
+
+                    <a href="#" class="
+                        text-slate-300
+                        hover:text-slate-900
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                      ">Features</a>
+
+                    <a href="#" class="
+                        text-slate-300
+                        hover:text-slate-900
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                      ">Pricing</a>
+
+                    <a href="#" class="
+                        text-slate-300
+                        hover:text-slate-900
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                      ">Blog</a>
+                  </div>
+                </div>
+              </nav>
+        `
+        el.innerHTML = div;
+        const pages_list_el = el.querySelector("#pages_list")
+        this.createWidget(pages_list_el, { type: "pages_list" });
+        return div;
+      }
+      createWidget(el, { type }) {
+        const widgets = {
+          pages_list: this.handleCreatePagesListWidget,
+          header: this.handleCreateHeaderWidget,
+        };
+        return widgets[type](el);
+      }
+    }
+    const bloggrs = new BloggrsClient({
+      blog_id: 1,
+      secret: "59cd2369-7b88-4116-b237-b44af9951e80",
+    });
+    bloggrs.createWidget(header_el, { type: "header" });
+  </script>
+</html>
