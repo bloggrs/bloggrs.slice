@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <script>
+    class BloggrsAPI {
+      constructor({ blog_id, secret }) {
+        this.blog_id = blog_id;
+        this.secret = secret;
+        this.base_url = "http://localhost:4000/api/v1";
+      }
+      async getCategories() {
+        const res = await fetch(
+          `${this.base_url}/blogs/${this.blog_id}/categories`
+        );
+        const {
+          data: { categories },
+        } = await res.json();
+        return categories;
+      }
+    }
+  </script>
+
+    <body class="bg-slate-100">
+        <br/>
+        <br/>
+        <br/>
+        <div class="mb-14 bg-white shadow-md rounded-md justify-center">
+            <div class=" mx-6">
+                <h1 class="py-3 mb-4 text-slate-700 font-medium text-xl">
+                    Categories
+                </h1>
+                <ul class="py-4 mx-5 list-disc space-y-3">
+                    <li>Food (5)</li>
+                    <li>Fashion (252)</li>
+                    <li>T-Shirts (159)</li>
+                    <li>New Trends (9)</li>
+                    <li>Woman's Fashion (45)</li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div id="categories_list">
+            
+        </div>
+    </body>
+    <script>
+        const categories_list_el = document.querySelector("categories_list")
+    </script>
+    <script src="http://localhost:3002/dist/index.js"></script>
+
+</html>
