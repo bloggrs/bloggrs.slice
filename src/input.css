@@ -79,3 +79,10 @@
 .home-container > div:not(:first-child) {
   margin-top: 2vh;
 }
+
+.special-p {
+  font: normal normal normal 18px/28px Poppins;
+  letter-spacing: 0px;
+  color: #8E9DAD;
+  opacity: 1;
+}
