@@ -52,3 +52,30 @@
 .container-custom {
   @apply container px-0
 }
+
+.grid-cols-24 {
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+}
+
+.special-text {
+  text-align: left;
+  font: normal normal normal 16px/25px Poppins;
+  letter-spacing: 0px;
+  color: #397FCC;
+  opacity: 1;
+}
+
+.center-image-inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1023px) {
+  .xl-grid-column-start-8 {
+    grid-column-start: 8 !important;
+  }
+}
+.home-container > div:not(:first-child) {
+  margin-top: 2vh;
+}
