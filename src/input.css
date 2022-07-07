@@ -92,10 +92,15 @@
   position: relative;
   width: 20vw;
   min-height: 10vh;
-  bottom: 18vh;
-  max-height: 18vh;
-  overflow-y: scroll;
-  left: 6vw;
+  bottom: 27vh;
+  max-width: 13vw;
+  max-height: 25vh;
+  overflow: auto;
+  left: 4vw;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  opacity: 1;
 }
 
 .select-blog-container > div {
@@ -121,12 +126,33 @@
 }
 
 .select-blog-container > div > img {
-  width: 3vw;
-  height: 24px;
+  width: 2.5vw;
+  height: 2.5vh;
   /* position: absolute; */
   padding-right: 15px;
   content:url("http://localhost:3000/blue-b-circle.png");
 }
 .select-blog-container > div[selected="true"] > img {
   content:url("http://localhost:3000/orange-b-circle.png");
+}
+
+.special-h2 {
+  text-align: left;
+  font: normal normal normal 19px/29px Poppins;
+  letter-spacing: 0px;
+  color: #293B54;
+  opacity: 1;
+}
+
+.special-h2-2 {
+  font: normal normal normal 17px/26px Poppins;
+  letter-spacing: 0px;
+  color: #8E9DAD;
+  opacity: 1;
+}
+
+.special-input {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 3px solid #F4F7FA;
+  border-radius: 25px;
 }
