@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-100">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <nav class=" bg-white shadow-md max-h-96 py-5">
+      <div class="mx-32 px-2 sm:px-6 lg:px-8">
+        <div class="  relative flex items-center justify-between h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="
+                inline-flex
+                items-center
+                justify-center
+                p-2
+                rounded-md
+                text-slate-400
+                hover:text-white hover:bg-slate-700
+                focus:outline-none
+                focus:ring-2
+                focus:ring-inset
+                focus:ring-white
+              "
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!--
+              Icon when menu is closed.
+              Heroicon name: outline/menu
+              Menu open: "hidden", Menu closed: "block"
+            -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!--
+              Icon when menu is open.
+              Heroicon name: outline/x
+              Menu open: "block", Menu closed: "hidden"
+            -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flex-1 flex items-center justify-center sm:justify-start">
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="/dist/static/image1.png"
+                alt="Workflow"
+              />
+              <img
+                class="hidden lg:block h-32 w-auto"
+                src="/dist/static/image1.png"
+                alt="Workflow"
+              />
+            </div>
+            <div class="hidden sm:block sm:ml-6">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300 hover:bg-slate-700 hover:text-white" -->
+
+                <a
+                  href="#"
+                  class="
+                    text-slate-600
+                    hover:text-slate-900
+                    px-3
+                    py-2
+                    rounded-md
+                    text-base
+                    font-medium
+                  "
+                  >Features</a
+                >
+
+                <a
+                  href="#"
+                  class="
+                    text-slate-600
+                    hover:text-slate-900
+                    px-3
+                    py-2
+                    rounded-md
+                    text-base
+                    font-medium
+                  "
+                  >Pricing</a
+                >
+
+                <a
+                  href="#"
+                  class="
+                    text-slate-600
+                    hover:text-slate-900
+                    px-3
+                    py-2
+                    rounded-md
+                    text-base
+                    font-medium
+                  "
+                  >Blog</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <div class="flex">
+              <div class="py-2 flex-inline">
+                <h4 class="mx-5 font-medium text-slate-600">John Cena</h4>
+                <h4 class="mx-4 font-medium text-slate-400">@johncena</h4>
+              </div>
+              <a href="/src/my-account">
+                <!-- <button class="btn btn-slate w-40 h-12 rounded-sm">Sign In</button> -->
+                <img src="/dist/static/icons8-test-account-80.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <!-- Current: "bg-slate-900 text-white", Default: "text-slate-300  hover:text-slate-900" -->
+          <a
+            href="#"
+            class="
+              bg-slate-900
+              text-white
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            aria-current="page"
+            >Dashboard</a
+          >
+
+          <a
+            href="#"
+            class="
+              text-slate-300
+              hover:text-slate-900
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >Features</a
+          >
+
+          <a
+            href="#"
+            class="
+              text-slate-300
+              hover:text-slate-900
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >Pricing</a
+          >
+
+          <a
+            href="#"
+            class="
+              text-slate-300
+              hover:text-slate-900
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >Blog</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div
+      class="fixed h-screen max-h-screen max-w-52 w-24 py-5 bg-slate-700"
+    >
+      <center class="">
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-dashboard-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-page-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-chat-bubble-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-team-80.png"/>
+        <img class="py-3 cursor-pointer" src="/dist/static/sidebar/icons8-settings-80.png"/>
+      </center>
+      <div class="fixed bottom-0 bg-white h-24 py-5 w-24 bg-slate-900">
+        <div class="cursor-pointer align-middle w-14 h-14 m-auto py-4 mx-5 rounded-full bg-slate-700 text-center ">
+          <span class="py-4 font-medium text-white">GK</span>
+        </div>
+      </div>
+    </div>
+    <div class="px-52 py-12">
+      <div class="flex -mx-2">
+        <div class="w-full w-6/6 lg:w-6/6 px-2">
+          <div class="flex w-6/6">
+            <div class="w-11/12">
+              <button class="btn-base w-32 bg-white border-2 border-yellow-500 text-yellow-500 rounded-full">
+                Back
+              </button>
+            </div>
+            <div class="w-1/12">
+              <button class=" btn-base w-52 bg-orange-300  text-white rounded-full focus:bg-yellow-500">
+                Add Category
+              </button>
+            </div>
+          </div>
+          <h1 class="text-3xl text-slate-700 font-medium py-5">Category #8</h1>      
+          <!-- <h1 class="text-xl text-slate-400 font-normal py-5">You can change this later anytime.</h1>       -->
+            <div class="my-2 flex py-10">
+              <div class="rounded-xl p-5 shadow-md bg-white min-w-full min-h-96">
+                <div class=" min-w-full min-h-min h-16 flex w-12/12">
+                  <div style="width: 63.333333%;display: flex; margin: auto 0; margin-left: 1.35vw;"">
+                    <div class="ml-3 text-sm">
+                      <label for="remember" class="font-normal  text-slate-500 dark:text-slate-300 special-p" style="text-align: left; font: normal normal normal 24px/35px Poppins; letter-spacing: 0px; color: #293B54; opacity: 1;">Category Details</label>
+                    </div>
+                  </div>
+                </div>
+                <div class=" min-w-full min-h-min h-16 flex w-12/12">
+                <div style="margin: auto 0; margin-left: 1.35vw;display: flex;" class="my-2 px-2 mb-3 xl:w-96 ">
+                    <label style="text-align: left; font: normal normal normal 18px/27px Poppins; letter-spacing: 0px; color: #293B54;margin-right: 15px;margin-left: 5px;" class="my-auto">Name</label>
+                    <input
+                      type="email"
+                      placeholder="Enter name.."
+                      style="background: #F4F7FA 0% 0% no-repeat padding-box; border: 1px solid #277AB3; border-radius: 25px;height: 38px;"
+                      class="
+                        form-control
+                        block
+                        w-full
+                        h-12
+                        border-white
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-slate-700
+                        bg-white bg-clip-padding
+                        border border-solid border-slate-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        focus:text-slate-700
+                        focus:bg-white
+                        focus:border-slate-800
+                        focus:border-2
+                        focus:outline-none
+                      "
+                      id="first_name"
+                      placeholder="Example label"
+                    />
+                  </div>
+                </div>
+                <div style="margin: auto 0; margin-left: 1.35vw;display: flex;" class="my-2 px-2 mb-3 xl:w-96 ">
+                    <label style="text-align: left; font: normal normal normal 18px/27px Poppins; letter-spacing: 0px; color: #293B54;margin-right: 15px;margin-left: 5px; margin-top: 2.5vh; margin-bottom: 2.2vh;" class="my-auto">Posts in this category</label>
+                  </div>
+                  <div style="margin: auto 0; margin-left: 1.35vw;display: flex;">
+                    <div class="border-slate-200 border-2 rounded-xl p-5 bg-white min-w-full min-h-96">
+                        <div class="border-b-slate-200 border-b-2 min-w-full min-h-min h-16 flex w-12/12">
+                          <div class="w-4/12" style="display: flex; margin: auto 0; margin-left: 1.35vw;" "="">
+                            <div class="flex items-center h-5">
+                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                            </div>
+                            <div class="ml-3 text-sm">
+                              <label for="remember" class="font-normal  text-slate-500 dark:text-slate-300 special-p">Select All</label>
+                            </div>
+                          </div>
+                          <!-- <div class="w-4/12">
+                            <h1 class="font-bold text-slate-800 text-xl py-4">Name</h1>
+                          </div> -->
+                          <div class="w-8/12 mx-5 py-2 flex ml-auto">
+                            <div class="special-input  ml-auto bg-transparent w-min-fit w-56 h-10 rounded-full border-2 border-slate-400 flex flex-inline items-center justify-center " style="max-width: 100%;">
+                              <img class="ml-10 my-2 w-6 h-6" src="/dist/static/icons8-search-48.png">
+                              <input placeholder="Search.." class="mx-4 py-2 placeholder:text-slate-400 text-slate-500 bg-transparent placeholder:mx-4 h-8 outline-none">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="border-b-slate-200 border-b-2 min-w-full min-h-min h-1.5/6 flex py-1 pb-1">
+                          <div class="flex items-start mb-6 py-4 mx-5 w-4/12" style="width: 20%;">
+                            <div class="flex items-center h-5 py-4 h-full">
+                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                            </div>
+                            <div class="ml-3 text-sm" style="width: 100%;">
+                              <div class="col-span-4 center-image-inside"><img class="mx-auto" src="http://localhost:3000/coming-soon.png"></div>
+                            </div>
+                          </div>
+        
+                          <div style="margin-top: 1vh; max-width: 40%" class="col-span-8 ml-4 my-1">
+                            <h2 class="special-h2">15 bloggers share their advice for successful blogging</h2>
+                            <h2 class="special-h2-2 ">To create and manage your own content, open the Blog Manager by hovering over your blog feed and clicking Mana....</h2>
+                         </div> 
+                          <div class="w-1/12 py-2 px-16 ml-auto">
+                            <div class="w-14 flex justify-evenly py-1 cursor-pointer">
+                              <img src="/dist/static/Ellipse 5.png">
+                              <img src="/dist/static/Ellipse 5.png">
+                              <img src="/dist/static/Ellipse 5.png">
+                            </div>
+                            <div class="form-settings-container">
+                              <div>
+                                  <img src="/dist/static/icons8-archive-160.png">
+                                 <span>View</span>
+                              </div>
+                              <div><img src="/dist/static/icons8-edit-48.png">
+                                 <span>Edit</span>
+                              </div>
+                              <div><img src="/dist/static/icons8-schedule-100.png">
+                                 <span>Schedule</span>
+                              </div>
+                              <div><img src="/dist/static/icons8-archive-160.png">
+                                <span>Archive</span>
+                             </div>
+                             <div><img src="/dist/static/icons8-delete-96 (1).png">
+                              <span style="color: #FF4040;">Delete</span>
+                           </div>
+                           </div>
+                              </div>
+                        </div>
+                        <div class="border-b-slate-200 border-b-2 min-w-full min-h-min h-1.5/6 flex py-1 pb-1">
+                          <div class="flex items-start mb-6 py-4 mx-5 w-4/12" style="width: 20%;">
+                            <div class="flex items-center h-5 py-4 h-full">
+                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                            </div>
+                            <div class="ml-3 text-sm" style="width: 100%;">
+                              <div class="col-span-4 center-image-inside"><img class="mx-auto" src="http://localhost:3000/coming-soon.png"></div>
+                            </div>
+                          </div>
+        
+                          <div style="margin-top: 1vh; max-width: 40%" class="col-span-8 ml-4 my-1">
+                            <h2 class="special-h2">15 bloggers share their advice for successful blogging</h2>
+                            <h2 class="special-h2-2 ">To create and manage your own content, open the Blog Manager by hovering over your blog feed and clicking Mana....</h2>
+                         </div> 
+                          <div class="w-1/12 py-2 px-16 ml-auto">
+                            <div class="w-14 flex justify-evenly py-1 cursor-pointer">
+                              <img src="/dist/static/Ellipse 5.png">
+                              <img src="/dist/static/Ellipse 5.png">
+                              <img src="/dist/static/Ellipse 5.png">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="border-b-slate-200 border-b-2 min-w-full min-h-min h-1.5/6 flex py-1 pb-1">
+                          <div class="flex items-start mb-6 py-4 mx-5 w-4/12" style="width: 20%;">
+                            <div class="flex items-center h-5 py-4 h-full">
+                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                            </div>
+                            <div class="ml-3 text-sm" style="width: 100%;">
+                              <div class="col-span-4 center-image-inside"><img class="mx-auto" src="http://localhost:3000/coming-soon.png"></div>
+                            </div>
+                          </div>
+        
+                          <div style="margin-top: 1vh; max-width: 40%" class="col-span-8 ml-4 my-1">
+                            <h2 class="special-h2">15 bloggers share their advice for successful blogging</h2>
+                            <h2 class="special-h2-2 ">To create and manage your own content, open the Blog Manager by hovering over your blog feed and clicking Mana....</h2>
+                         </div> 
+                          <div class="w-1/12 py-2 px-16 ml-auto">
+                            <div class="w-14 flex justify-evenly py-1 cursor-pointer">
+                              <img src="/dist/static/Ellipse 5.png">
+                              <img src="/dist/static/Ellipse 5.png">
+                              <img src="/dist/static/Ellipse 5.png">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="border-b-slate-200  min-w-full min-h-min h-1.5/6 text-center py-5 cursor-pointer font-bold text-slate-500">
+                          Load More
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+            <!-- <div class="flex flex-inline">
+              <div class="w-4/6 bg-white overflow-y-scroll h-60 scrollbar-rounded scrollbar-thin scrollbar-thumb-yellow-500 scrollbar-track-orange-100 h-32 overflow-y-scroll">
+                <p class="mx-10 my-2 text-blue-500">Travel</p>
+                <p class="mx-10 my-2 text-slate-500">Travel blog</p>
+                <p class="mx-10 my-2 text-slate-500">Travel tickets store</p>
+                <p class="mx-10 my-2 text-slate-500">Travel tickets subscriptions</p>
+                <p class="mx-10 my-2 text-slate-500">Online Travel Show</p>
+                <p class="mx-10 my-2 text-slate-500">Travel blog</p>
+                <p class="mx-10 my-2 text-slate-500">Travel tickets store</p>
+                <p class="mx-10 my-2 text-slate-500">Travel tickets subscriptions</p>
+                <p class="mx-10 my-2 text-slate-500">Online Travel Show</p>
+                <p class="mx-10 my-2 text-slate-500">Travel blog</p>
+                <p class="mx-10 my-2 text-slate-500">Travel tickets store</p>
+                <p class="mx-10 my-2 text-slate-500">Travel tickets subscriptions</p>
+                <p class="mx-10 my-2 text-slate-500">Online Travel Show</p>
+                <p class="mx-10 my-2 text-slate-500">Travel accessories</p>
+                <p class="mx-10 my-2 text-slate-500">Online Travel Accessories Shop</p>
+              </div>
+            </div> -->
+          </div>   
+                   
+      </div>
+        </div>
+    </div>
+  </body>
+</html>
