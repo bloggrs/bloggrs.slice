@@ -86,3 +86,47 @@
   color: #8E9DAD;
   opacity: 1;
 }
+
+.select-blog-container {
+  background-color: white;
+  position: relative;
+  width: 20vw;
+  min-height: 10vh;
+  bottom: 18vh;
+  max-height: 18vh;
+  overflow-y: scroll;
+  left: 6vw;
+}
+
+.select-blog-container > div {
+  margin-top: 25px;
+  margin-left: 16px;
+  text-align: left;
+  font: normal normal normal 17px/26px Poppins;
+  letter-spacing: 0px;
+  color: #4A596B;
+  opacity: 1;
+  display: inline-flex; 
+}
+.select-blog-container > div:last-child {
+  margin-bottom: 25px;
+}
+
+.select-blog-container > div[selected="true"] {
+  text-align: left;
+  font: normal normal normal 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #F7941D;
+  opacity: 1;
+}
+
+.select-blog-container > div > img {
+  width: 3vw;
+  height: 24px;
+  /* position: absolute; */
+  padding-right: 15px;
+  content:url("http://localhost:3000/blue-b-circle.png");
+}
+.select-blog-container > div[selected="true"] > img {
+  content:url("http://localhost:3000/orange-b-circle.png");
+}
