@@ -918,6 +918,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.25rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-96 {
   height: 24rem;
 }
@@ -940,10 +944,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-auto {
   height: auto;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-3\/4 {
@@ -2133,6 +2133,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 3px solid #F4F7FA;
   border-radius: 25px;
+}
+
+.post-settings-container {
+  position: absolute;
+  min-height: 10vh;
+  bottom: initial;
+  max-width: 13vw;
+  max-height: 25vh;
+  overflow: auto;
+  right: 13vw;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+  width: 188px;
+  height: 237px;
+}
+
+.post-settings-container > div {
+  display: flex;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.post-settings-container > div > img {
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
 
 .placeholder\:mx-4::-moz-placeholder {
